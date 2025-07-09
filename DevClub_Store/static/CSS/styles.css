@@ -32,18 +32,18 @@ header {
     text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
 }
 
-header nav ul {
+header nav .menu {
     display: flex;
     gap: 48px;
 }
 
-header nav ul li {
+header nav .menu li {
     cursor: pointer;
     position: relative;
     padding: 5px 0;
 }
 
-header nav ul li::after {
+header nav .menu li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -54,7 +54,7 @@ header nav ul li::after {
     transition: width 0.3s ease;
 }
 
-header nav ul li:hover::after {
+header nav .menu li:hover::after {
     width: 100%;
 }
 
@@ -317,3 +317,124 @@ header nav ul li:hover::after {
     top: 20%;
     left: 70%;
 }
+
+.botao-menu {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: auto;
+    }
+
+    header {
+        background-color: white;
+        width: 100%;
+        gap: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 79%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        overflow: hidden;
+        color: #000;
+        max-height: 0;
+        transition: 0.3s ease-in-out;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .ativo {
+        max-height: 200px;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        height: 140vh;
+        padding-bottom: 100px;
+        padding-top: 100px;
+    }
+
+
+    .arrow-btn {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .description {
+        text-align: start;
+    }
+
+    .product-img img {
+        max-width: 200%;
+        max-height: 100%;
+    }
+
+    .indicators {
+        position: relative;
+        margin-top: 20px;
+    }
+
+}
+
+/*
+    .destaque .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .recursos .container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 20px;
+    }
+
+    .botao-menu {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: white;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.3s ease-in-out;
+        max-height: 0;
+    }
+
+    .ativo {
+        max-height: 200px;
+        padding: 20px;
+    }
+}
+*/
