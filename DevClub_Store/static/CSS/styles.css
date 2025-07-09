@@ -372,8 +372,8 @@ header nav .menu li:hover::after {
     .container {
         width: 100%;
         height: 140vh;
-        padding-bottom: 100px;
-        padding-top: 100px;
+        padding-bottom: 160px;
+        padding-top: 220px;
     }
 
 
@@ -390,6 +390,10 @@ header nav .menu li:hover::after {
         text-align: start;
     }
 
+    .product-img {
+        height: 50%;
+    }
+
     .product-img img {
         max-width: 200%;
         max-height: 100%;
@@ -397,7 +401,7 @@ header nav .menu li:hover::after {
 
     .indicators {
         position: relative;
-        margin-top: 20px;
+        margin-top: 110px;
     }
 
 }
